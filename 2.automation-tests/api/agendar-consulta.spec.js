@@ -2,7 +2,7 @@ const { test, expect } = require('@playwright/test');
 const Ajv = require('ajv');
 
 let updateDate = new Date;
-let responseBody;
+
 test.describe('Teste', () => {
 test('2.1 Agendar nova consulta no mesmo dia', async({request})=>{
     const response = await request.post('http://localhost:8080/api/appointments',{
@@ -15,9 +15,8 @@ test('2.1 Agendar nova consulta no mesmo dia', async({request})=>{
     });
 
     expect(response.status()).toBe(201);
-    responseBody = await response.json();
 
- 
+
  })
 
  test('2.2.1 Agendar nova consulta no dia posterior', async({request})=>{
@@ -37,6 +36,18 @@ test('2.1 Agendar nova consulta no mesmo dia', async({request})=>{
  })
 
  test('Validar contrato agendamento', async({request}) =>{
+    const response = await request.post('http://localhost:8080/api/appointments',{
+        data: {
+            "doctor_id": "1", 
+            "patient_id": "2", 
+            "appointment_date": updateDate, 
+        }
+    
+       });
+   
+       expect(response.status()).toBe(201);
+       const responseBody = await response.json();
+   
   
     const schema = {
         "$schema": "http://json-schema.org/draft-07/schema#", 
