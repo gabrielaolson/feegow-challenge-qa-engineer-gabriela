@@ -2,7 +2,7 @@ const { test, expect } = require('@playwright/test');
 const Ajv = require('ajv');
 
 let updateDate = new Date;
-
+console.log(updateDate);
 test.describe('Teste', () => {
 test('2.1 Agendar nova consulta no mesmo dia', async({request})=>{
     const response = await request.post('http://localhost:8080/api/appointments',{
@@ -15,7 +15,7 @@ test('2.1 Agendar nova consulta no mesmo dia', async({request})=>{
     });
     console.log(updateDate);
 
-    await expect(response.status()).toBe(201);
+    expect(response.status()).toBe(201);
 
 
  })
