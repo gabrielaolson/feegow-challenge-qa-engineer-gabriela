@@ -6,6 +6,8 @@ test('4.2 Verificar lista de consultas disponíveis para agendamento', async({re
     const response = await request.get('http://localhost:8080/api/appointments');
     expect(response.status()).toBe(200);
     const responseData = await response.json();
+    const text = await response.text();
+    console.log(text)
 
     const horariosLivres = [];
     responseData.forEach(item => {

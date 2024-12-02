@@ -15,8 +15,10 @@ test('2.1 Agendar nova consulta no mesmo dia', async({request})=>{
  
     });
     console.log(updateDate);
-
+    const text = await response.text();
+    console.log(text)
     expect(response.status()).toBe(201);
+    
 
 
  })
