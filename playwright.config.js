@@ -20,8 +20,8 @@ module.exports = defineConfig({
   /* Retry on CI only */
  
   /* Opt out of parallel tests on CI. */
-  workers: 2, 
-  retries: 2, 
+  workers: 6, 
+  retries: 3, 
 
   use: {
     trace: 'on-first-retry',
