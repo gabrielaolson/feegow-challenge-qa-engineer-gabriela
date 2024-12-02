@@ -3,8 +3,10 @@
 
 
 ## Setup
-### Comandos de instalação - da pasta raiz**
+### Inslalar playwright**
 `npm init playwright@latest`
+
+### Inslalar ajv para teste de contrato**
 `npm i ajv`
 
 ### Para os testes de api seguir instruções em**
