@@ -23,6 +23,10 @@ jobs:
           make install
           make mig
       working-directory: ./api
+    - name: Wait for API to be ready
+      run: 
+        npx wait-on http://localhost:3000
+      
 
     - name: Run Playwright tests
       run: |
