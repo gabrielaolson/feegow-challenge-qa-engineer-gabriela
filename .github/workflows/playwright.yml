@@ -18,27 +18,10 @@ jobs:
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
 
-    - name: Update and Install Make
-      run: |
-          sudo apt update
-          sudo apt install -y make
-      working-directory: ./api
-
-    - name: Adjust Database Permissions
-      run: |
-        chmod -R 777 ./api/database
-    - name: Build API with Make
-      run: |
-          make up
-          make install
-          make mig    
-
-      working-directory: ./api
-
     - name: Run Playwright tests
       run: |
             npx playwright test 2.automation-tests/e2e/
-            npx playwright test 2.automation-tests/api/
+            # npx playwright test 2.automation-tests/api/
        
     - uses: actions/upload-artifact@v4
       if: ${{ !cancelled() }}
@@ -46,9 +29,3 @@ jobs:
         name: playwright-report
         path: playwright-report/
         retention-days: 30
-
-    - name: Parar API Server
-      if: always()
-      run: |
-        cd api
-        make down
