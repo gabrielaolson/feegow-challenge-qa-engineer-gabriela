@@ -17,6 +17,11 @@ jobs:
       run: npm ci
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
+
+    - name: Update and Install Make
+      run: |
+          sudo apt update
+          sudo apt install -y make
     - name: Build API with Make
       run: |
           make up
