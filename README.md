@@ -3,11 +3,11 @@
 
 
 ## Setup
-**Comandos de instalação - da pasta raiz**
+### Comandos de instalação - da pasta raiz**
 `npm init playwright@latest`
 `npm i ajv`
 
-**Para os testes de api seguir instruções em**
+### Para os testes de api seguir instruções em**
 `api/README.md`
 
 **Comandos para rodar os testes**
