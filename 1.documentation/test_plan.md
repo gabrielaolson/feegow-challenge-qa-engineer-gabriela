@@ -213,5 +213,5 @@ Como a maioria dos testes é apenas simulação, ou seja, não há dados realmen
 Eu inclui test.fail() para que os testes mesmo falhando retornassem com status Pass.
 
 Para a pipeline no git actons:
- - Done: Ostestes e2e estão sendo rodados na pipeline, teste que falha foi colocado para skipar (Bug documentado em feegow-challenge-qa-engineer/3.bug-report)
+ - Done: Os testes e2e estão sendo rodados na pipeline, teste que falha foi colocado para skipar (Bug documentado em feegow-challenge-qa-engineer/3.bug-report)
  - To do: Faltam ajustes para rodar os testes de api na pipeline, encontrei erros para escrever no banco de dados, precisarei investigar para corrigir
