@@ -5,7 +5,7 @@ let updateDate = new Date;
 
 test.describe('Teste', () => {
 test('2.1 Agendar nova consulta no mesmo dia', async({request})=>{
-    const response = await request.post('http://localhost:3000/api/appointments',{
+    const response = await request.post('http://localhost:8080/api/appointments',{
      data: {
          "doctor_id": "1", 
          "patient_id": "2", 
@@ -21,7 +21,7 @@ test('2.1 Agendar nova consulta no mesmo dia', async({request})=>{
 
  test('2.2.1 Agendar nova consulta no dia posterior', async({request})=>{
     updateDate.setDate(updateDate.getDate() + 1); 
-    const response = await request.post('http://localhost:3000/api/appointments',{
+    const response = await request.post('http://localhost:8080/api/appointments',{
      data: {
          "doctor_id": "1", 
          "patient_id": "2", 
@@ -36,7 +36,7 @@ test('2.1 Agendar nova consulta no mesmo dia', async({request})=>{
  })
 
  test('Validar contrato agendamento', async({request}) =>{
-    const response = await request.post('http://localhost:3000/api/appointments',{
+    const response = await request.post('http://localhost:8080/api/appointments',{
         data: {
             "doctor_id": "1", 
             "patient_id": "2", 
