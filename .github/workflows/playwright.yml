@@ -22,6 +22,7 @@ jobs:
       run: |
           sudo apt update
           sudo apt install -y make
+      working-directory: ./api
     - name: Build API with Make
       run: |
           make up
