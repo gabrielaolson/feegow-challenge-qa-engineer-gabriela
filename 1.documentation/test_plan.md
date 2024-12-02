@@ -50,7 +50,7 @@ Este plano de teste visa assegurar a qualidade do sistema de agendamento de cons
 | TC02 | Agendar uma nova consulta              | Testar se o usuário consegue agendar uma nova consulta com sucesso                              | End-to-End, Integração          | Alta       |
 | TC03 | Tentar cancelar consulta com menos / mais de 12 de antecedência | Testar se o sistema exibe um erro ao tentar cancelar uma consulta com menos de 12h de antecedência , e funciona se consulta tem mais de 12h de antecedência      | End-to-End | Alta      |
 | TC04 | Validar se o sistema está mostrando apenas horários vagos para agendamento     | Testar se o sistema exibe apenas horários disponíveis para o agendamento             | End-to-End, Integração            | Média      |
-| TC05 | Botão cancelar deve estar inativo/oculto para uma consulta que o horário já passou/andamento | Testar se Botão cancelar esta inativo para consulta que o horário já passou/andamento                | End-to-End         | Baixa       |
+| TC05 | Botão cancelar deve estar inativo/oculto para uma consulta que o horário já passou/andamento | Testar se Botão cancelar esta inativo para consulta que o horário já passou/andamento                | End-to-End         | Média       |
 | TC06 | Tentar cancelar consulta que foi agendada nos últimos 5 minutos     | Consulta deve ser cancelada com sucesso            | End-to-End, Integração            | Baixa      |
 
 
@@ -67,7 +67,7 @@ Este plano de teste visa assegurar a qualidade do sistema de agendamento de cons
    2. O sistema deve permitir o usuário cancelar consulta que tem mais de 12h de antecedência até agendamento.
 4. **Validar se o sistema está mostrando apenas horários vagos para agendamento**: O sistema deve mostrar apenas horários disponíveis para agendameto.
 5. **Botão cancelar deve estar inativo/oculto para uma consulta que o horário já passou/andamento** : o botão deve estar inativo/oculto quando a consulta já passou/andamento.
-6. **Tentar cancelar consulta que foi agendada nos últimos 5 minutos**: O sistema deve permitir o cancelamento de uma consulta agendada n os últimos 5 minutos.
+6. **Tentar cancelar consulta que foi agendada nos últimos 5 minutos**: O sistema deve permitir o cancelamento de uma consulta agendada nos últimos 5 minutos.
 
 
 
