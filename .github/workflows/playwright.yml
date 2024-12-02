@@ -24,19 +24,14 @@ jobs:
           sudo apt install -y make
       working-directory: ./api
 
-    - name: Create Database File
+    - name: Adjust Database Permissions
       run: |
-          mkdir -p ./api/database
-          touch ./api/database/database.sqlite
-          chmod 777 ./api/database/database.sqlite
-
+        chmod -R 777 ./api/database
     - name: Build API with Make
       run: |
           make up
           make install
-          make mig
-          cat ./api/database/database.sqlite
-          
+          make mig    
 
       working-directory: ./api
 
