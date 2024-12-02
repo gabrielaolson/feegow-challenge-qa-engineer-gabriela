@@ -187,8 +187,8 @@ Incluido teste de contrato para validar shema do agendamento.
 
 ## Ambiente de Teste
 - **Dispositivo**: Desktop e Mobile
-- **Sistema Operacional**: Windows 10, macOS Catalina, Android 11, iOS 14
-- **Navegador**: Google Chrome, Firefox, Safari, Edge
+- **Sistema Operacional**: Windows, macOS, Android, iOS
+- **Navegador**: Google Chrome, Chromium, Firefox, Safari
 - **Ambiente**: Staging
 
 ---
