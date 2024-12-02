@@ -10,7 +10,7 @@ test('1.3.1 Login no sistema de agendamentos e conferência do Token', async({re
     const loginData = {
         email: 'email'
     }
-    const response = await request.post('http://localhost:8080/api/login',{
+    const response = await request.post('http://localhost:3000/api/login',{
      data: {
          "email": email,
          "password": password

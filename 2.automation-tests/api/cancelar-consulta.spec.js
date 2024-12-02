@@ -9,7 +9,7 @@ test.describe('Teste', () => {
 
  test('6.1 Cancelar uma consulta que foi criada em menos de 5 minutos', async({request})=>{
 
-    const responseAgendamento = await request.post('http://localhost:8080/api/appointments',{
+    const responseAgendamento = await request.post('http://localhost:3000/api/appointments',{
         data: {
             "doctor_id": "1", 
             "patient_id": "2", 
