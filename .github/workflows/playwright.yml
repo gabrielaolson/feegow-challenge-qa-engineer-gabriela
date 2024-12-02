@@ -31,9 +31,9 @@ jobs:
       working-directory: ./api
     - name: Create Database File
       run: |
-          mkdir -p ./tmp
-          touch ./tmp/database.sqlite
-          chmod 777 ./tmp/database.sqlite
+          mkdir -p ./api/database
+          touch ./api/database/database.sqlite
+          chmod 777 ./api/database/database.sqlite
 
     - name: Run Playwright tests
       run: |
