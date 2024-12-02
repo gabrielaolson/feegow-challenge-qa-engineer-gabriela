@@ -23,17 +23,22 @@ jobs:
           sudo apt update
           sudo apt install -y make
       working-directory: ./api
-    - name: Build API with Make
-      run: |
-          make up
-          make install
-          make mig
-      working-directory: ./api
+
     - name: Create Database File
       run: |
           mkdir -p ./api/database
           touch ./api/database/database.sqlite
           chmod 777 ./api/database/database.sqlite
+
+    - name: Build API with Make
+      run: |
+          make up
+          make install
+          make mig
+          cat ./api/database/database.sqlite
+          
+
+      working-directory: ./api
 
     - name: Run Playwright tests
       run: |
