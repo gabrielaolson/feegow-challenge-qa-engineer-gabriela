@@ -55,4 +55,4 @@ down: ## Para o ambiente
 
 install: check-vendor ## Instala as dependências do Composer
 	@echo "Instalando dependências do Composer..."
-	docker exec -it $(CONTAINER_NAME) composer install
+	docker exec $(CONTAINER_NAME) composer install
