@@ -34,7 +34,7 @@ Este plano de teste visa assegurar a qualidade do sistema de agendamento de cons
 | TC02 | Agendar uma nova consulta                | 5                    | 5             | 25                      | Alta       |
 | TC03 | Tentar cancelar consulta com menos / mais de 12h de antecedência | 4 | 5            | 20                       | Alta      |
 | TC04 | Validar se o sistema está mostrando apenas horários vagos para agendamento| 3 | 3            | 9                       | Média      |
-| TC05 | Botão cancelar deve estar inativo/oculto para uma consulta que o horário já passou/andamento                   | 3             | 6                      | Baixa       |
+| TC05 | Botão cancelar deve estar inativo/oculto para uma consulta que o horário já passou/andamento                   | 3             | 3      | 9               | Média       |
 | TC06 | Tentar cancelar consulta que foi agendada nos últimos 5 minutos         | 3                    | 2             | 6                       | Baixa      |
 
 
@@ -74,108 +74,108 @@ Este plano de teste visa assegurar a qualidade do sistema de agendamento de cons
 ### Usando BDD para ter uma documentação de fácil compreensão
 
 
-Cenário 1 Cadastro do usuário - End-to-End 
-Dado que o usuário está na tela de cadastro
-Quando preenche os dados requeridos 
-E clica em finalizar
-Então o cadastro foi efetuado com sucesso
+  Cenário 1 Cadastro do usuário - End-to-End   
+  Dado que o usuário está na tela de cadastro  
+  Quando preenche os dados requeridos  
+  E clica em finalizar  
+  Então o cadastro foi efetuado com sucesso  
 
-Cenário 1.2 Cadastro do usuário -  Integração
-Dado que existe o endpoint /cadastro
-E que o usuário envia uma requisição POST com o paylod requerido
-Então deve retornar código 201 de sucesso
+  Cenário 1.2 Cadastro do usuário -  Integração  
+  Dado que existe o endpoint /cadastro
+  E que o usuário envia uma requisição POST com o paylod requerido
+  Então deve retornar código 201 de sucesso
 
-Cenário 1.3 Login - End-to-End - ok
-Dado que o usuário está na página de Login
-Quando preenche os dados de usuário e senha
-E clica em entrar
-Então o usuário logou com sucesso no sistema
+  Cenário 1.3 Login - End-to-End - ok
+  Dado que o usuário está na página de Login
+  Quando preenche os dados de usuário e senha
+  E clica em entrar
+  Então o usuário logou com sucesso no sistema
 
-Cenário 1.3.1 Login - Integração 
-Dado que existe o endpoint /login
-E que o usuário envia uma requisição POST com o paylod requerido
-Então deve retornar código 201 de sucesso
+  Cenário 1.3.1 Login - Integração 
+  Dado que existe o endpoint /login
+  E que o usuário envia uma requisição POST com o paylod requerido
+  Então deve retornar código 201 de sucesso
 
 
-Cenário 2 Agendar uma nova consulta mesmo dia - End-to-End 
-Dado que o usuário foi cadastrado e está logado no sistema de agendamento
-E está na página de agendamento
-Quando o usuário tenta agendar uma consulta em horário disponível
-Então deve ser exibida mensagem que a consulta foi agendada com sucesso
-E o usuário deve visualizar a consulta na sua página de consultas agendadas
+  Cenário 2 Agendar uma nova consulta mesmo dia - End-to-End 
+  Dado que o usuário foi cadastrado e está logado no sistema de agendamento
+  E está na página de agendamento
+  Quando o usuário tenta agendar uma consulta em horário disponível
+  Então deve ser exibida mensagem que a consulta foi agendada com sucesso
+  E o usuário deve visualizar a consulta na sua página de consultas agendadas
 
-Cenário 2.1 Agendar uma nova consulta mesmo dia - Integração
-Dado que o usuário está autenticado no sistema de agendamento
-E que existe o endpoint /agendamento 
-E que o usuário envia uma requisição POST com o paylod requerido
-Então deve retornar código 201 de sucesso
-E devem os dados do agendamento estarem salvos no banco de dados
-E devem estar disponíveis a lista da(s) consulta(s) agendada(s) quando efetuada requisição GET em /agendamento
+  Cenário 2.1 Agendar uma nova consulta mesmo dia - Integração
+  Dado que o usuário está autenticado no sistema de agendamento
+  E que existe o endpoint /agendamento 
+  E que o usuário envia uma requisição POST com o paylod requerido
+  Então deve retornar código 201 de sucesso
+  E devem os dados do agendamento estarem salvos no banco de dados
+  E devem estar disponíveis a lista da(s) consulta(s) agendada(s) quando efetuada requisição GET em /agendamento
 
-Cenário 2.2 Agendar uma nova consulta dia posterior  - End-to-End
-Dado que o usuário foi cadastrado e está logado no sistema de agendamento
-E está na página de agendamento
-Quando o usuário tenta agendar uma consulta em horário disponível
-Então deve ser exibida mensagem que a consulta foi agendada com sucesso
-E o usuário deve visualizar a consulta na sua página de consultas agendadas
+  Cenário 2.2 Agendar uma nova consulta dia posterior  - End-to-End
+  Dado que o usuário foi cadastrado e está logado no sistema de agendamento
+  E está na página de agendamento
+  Quando o usuário tenta agendar uma consulta em horário disponível
+  Então deve ser exibida mensagem que a consulta foi agendada com sucesso
+  E o usuário deve visualizar a consulta na sua página de consultas agendadas
 
-Cenário 2.2.1 Agendar uma nova consulta dia posterior - Integração
-Dado que o usuário está autenticado no sistema de agendamento
-E que existe o endpoint /agendamento 
-E que o usuário envia uma requisição POST com o paylod requerido
-Então deve retornar código 201 de sucesso
-E devem os dados do agendamento estarem salvos no banco de dados
-E devem estar disponíveis a lista da(s) consulta(s) agendada(s) quando efetuada requisição GET em /agendamento
+  Cenário 2.2.1 Agendar uma nova consulta dia posterior - Integração
+  Dado que o usuário está autenticado no sistema de agendamento
+  E que existe o endpoint /agendamento 
+  E que o usuário envia uma requisição POST com o paylod requerido
+  Então deve retornar código 201 de sucesso
+  E devem os dados do agendamento estarem salvos no banco de dados
+  E devem estar disponíveis a lista da(s) consulta(s) agendada(s) quando efetuada requisição GET em /agendamento
 
-Cenário 3 Erro ao tentar cancelar consulta com menos de 12 horas de antecedência - End-to-End
-Dado que o usuário foi cadastrado e está logado no sistema de agendamento
-E está na página de consultas agendadas
-E tem consulta recém agendada na página
-Quando o usuário tenta cancelar uma consulta que está a menos de 12h para acontecer
-Então deve ser exibida mensagem de erro ao usuário que a consulta não pode ser cancelada com menos de 12h de antecedência
-E o usuário deve visualizar a consulta na sua página de consultas agendadas
+  Cenário 3 Erro ao tentar cancelar consulta com menos de 12 horas de antecedência - End-to-End
+  Dado que o usuário foi cadastrado e está logado no sistema de agendamento
+  E está na página de consultas agendadas
+  E tem consulta recém agendada na página
+  Quando o usuário tenta cancelar uma consulta que está a menos de 12h para acontecer
+  Então deve ser exibida mensagem de erro ao usuário que a consulta não pode ser cancelada com menos de 12h de antecedência
+  E o usuário deve visualizar a consulta na sua página de consultas agendadas
 
-Cenário 3.2 Cancelar consulta com mais de 12 horas de antecedência - End-to-End
-Dado que o usuário foi cadastrado e está logado no sistema de agendamento
-E está na página de consultas agendadas
-E tem consulta recém agendada na página
-Quando o usuário tenta cancelar uma consulta que está a menos de 12h para acontecer
-Então deve ser exibida mensagem de erro ao usuário que a consulta não pode ser cancelada com menos de 12h de antecedência
-E o usuário deve visualizar a consulta na sua página de consultas agendadas
+  Cenário 3.2 Cancelar consulta com mais de 12 horas de antecedência - End-to-End
+  Dado que o usuário foi cadastrado e está logado no sistema de agendamento
+  E está na página de consultas agendadas
+  E tem consulta recém agendada na página
+  Quando o usuário tenta cancelar uma consulta que está a menos de 12h para acontecer
+  Então deve ser exibida mensagem de erro ao usuário que a consulta não pode ser cancelada com menos de 12h de antecedência
+  E o usuário deve visualizar a consulta na sua página de consultas agendadas
 
-Cenário 4 Validar se o sistema está mostrando apenas horários vagos para agendamento - End-to-End com Integração
-Dado que o usuário foi cadastrado e está logado no sistema de agendamento
-E está na página de agendamentos para um médico
-Então são exibidos os horários disponíveis na página do médico
-Dado que o usuário está autenticado no sistema de agendamento
-E faço uma requisição GET no endpoint /horariosdisponiveis para o médico
-Então deve retornar código 201 de sucesso
-E devem os horários da página do médico serem os mesmos que retornaram no response do GET
+  Cenário 4 Validar se o sistema está mostrando apenas horários vagos para agendamento - End-to-End com Integração
+  Dado que o usuário foi cadastrado e está logado no sistema de agendamento
+  E está na página de agendamentos para um médico
+  Então são exibidos os horários disponíveis na página do médico
+  Dado que o usuário está autenticado no sistema de agendamento
+  E faço uma requisição GET no endpoint /horariosdisponiveis para o médico
+  Então deve retornar código 201 de sucesso
+  E devem os horários da página do médico serem os mesmos que retornaram no response do GET
 
-Cenário 5 Botão cancelar deve estar inativo/oculto para uma consulta que o horário já passou/andamento - End-to-End
-Dado que o usuário foi cadastrado e está logado no sistema de agendamento
-E está na página de consultas agendadas
-Quando o usuário tenta clicar no botão cancelar para a consulta que já passou/andamento 
-Então o botão cancelar está acinzentado(desabilitado o clique)
-E uma mensagem é exibida ao lado do botão avisando que as consultas só podem ser canceladas com até 12h de antecedência
+  Cenário 5 Botão cancelar deve estar inativo/oculto para uma consulta que o horário já passou/andamento - End-to-End
+  Dado que o usuário foi cadastrado e está logado no sistema de agendamento
+  E está na página de consultas agendadas
+  Quando o usuário tenta clicar no botão cancelar para a consulta que já passou/andamento 
+  Então o botão cancelar está acinzentado(desabilitado o clique)
+  E uma mensagem é exibida ao lado do botão avisando que as consultas só podem ser canceladas com até 12h de antecedência
 
-Cenário 6 Tentar cancelar consulta que foi agendada nos últimos 5 minutos - End-to-End
-Dado que o usuário foi cadastrado e está logado no sistema de agendamento
-E está na página de consultas agendadas
-E há consultas agendadas recentemente
-Quando o usuário tenta cancelar uma consulta agendada nos últimos 5 minutos
-Então deve ser exibida mensagem que a consulta foi cancelada com sucesso
-E o usuário deve visualizar a consulta na sua página de consultas canceladas
+  Cenário 6 Tentar cancelar consulta que foi agendada nos últimos 5 minutos - End-to-End
+  Dado que o usuário foi cadastrado e está logado no sistema de agendamento
+  E está na página de consultas agendadas
+  E há consultas agendadas recentemente
+  Quando o usuário tenta cancelar uma consulta agendada nos últimos 5 minutos
+  Então deve ser exibida mensagem que a consulta foi cancelada com sucesso
+  E o usuário deve visualizar a consulta na sua página de consultas canceladas
 
-Cenário 6.1 Tentar cancelar consulta que foi agendada nos últimos 5 minutos - Integração
-Dado que o usuário está autenticado no sistema de agendamento
-E que existe o endpoint /cancelamento 
-E que o usuário envia uma requisição POST com o paylod requerido com uma consulta que arressem foi agendada
-Então deve retornar código 201 de sucesso
-E devem os dados do cancelamento estarem salvos no banco de dados
-E devem estar disponíveis a lista de consulta(s) cancelada(s) quando efetuada requisição GET em /cancelamento
+  Cenário 6.1 Tentar cancelar consulta que foi agendada nos últimos 5 minutos - Integração
+  Dado que o usuário está autenticado no sistema de agendamento
+  E que existe o endpoint /cancelamento 
+  E que o usuário envia uma requisição POST com o paylod requerido com uma consulta que arressem foi agendada
+  Então deve retornar código 201 de sucesso
+  E devem os dados do cancelamento estarem salvos no banco de dados
+  E devem estar disponíveis a lista de consulta(s) cancelada(s) quando efetuada requisição GET em /cancelamento
 
-Incluido teste de contrato para validar shema do agendamento.
+  Incluido um teste de contrato para validar shema do agendamento.
 
 ## Page objects:
 - Home page
@@ -211,3 +211,7 @@ Deste modo podemos prosseguir com a release com garantia qualidade, visando a co
 
 Como a maioria dos testes é apenas simulação, ou seja, não há dados realmente sendo consultados na UI/ API
 Eu inclui test.fail() para que os testes mesmo falhando retornassem com status Pass.
+
+Para a pipeline no git actons:
+ - Done: Ostestes e2e estão sendo rodados na pipeline, teste que falha foi colocado para skipar (Bug documentado em feegow-challenge-qa-engineer/3.bug-report)
+ - To do: Faltam ajustes para rodar os testes de api na pipeline

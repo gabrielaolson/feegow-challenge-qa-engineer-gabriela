@@ -18,7 +18,7 @@ test.describe('Teste', () => {
     
        });
 
-       expect(responseAgendamento.status()).toBe(201);
+       await expect(responseAgendamento.status()).toBe(201);
        const responseData = await responseAgendamento.json();
        var id = responseData.id;
        console.log(id);
