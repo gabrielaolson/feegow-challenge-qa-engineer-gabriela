@@ -13,14 +13,16 @@ test('2.1 Agendar nova consulta no mesmo dia', async({request})=>{
      }
  
     });
+    console.log(updateDate);
 
-    expect(response.status()).toBe(201);
+    await expect(response.status()).toBe(201);
 
 
  })
 
  test('2.2.1 Agendar nova consulta no dia posterior', async({request})=>{
     updateDate.setDate(updateDate.getDate() + 1); 
+    console.log(updateDate);
     const response = await request.post('http://localhost:8080/api/appointments',{
      data: {
          "doctor_id": "1", 
@@ -30,7 +32,7 @@ test('2.1 Agendar nova consulta no mesmo dia', async({request})=>{
  
     });
 
-    expect(response.status()).toBe(201);
+    await expect(response.status()).toBe(201);
 
  
  })
