@@ -67,8 +67,8 @@ module.exports = defineConfig({
 
 
   reporter: [
-    ['html', { outputFolder: 'test-results', open: 'always' }],
-    ['json', { outputFolder: 'test-results', outputFile: 'report.json' }]
+    ['html', { outputFolder: 'playwright-report', open: 'always' }],
+    ['json', { outputFolder: 'playwright-report', outputFile: 'report.json' }]
   ],
  
 });
