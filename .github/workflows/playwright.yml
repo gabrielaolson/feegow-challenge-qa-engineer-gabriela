@@ -19,17 +19,13 @@ jobs:
       run: npx playwright install --with-deps
     - name: Build API with Make
       run: |
-          cd api
           make up
           make install
           make mig
+      working-directory: ./api
 
     - name: Run Playwright tests
       run: |
-        echo
-        pwd
-        cd..
-        echo
         pwd
         npx playwright test
     - uses: actions/upload-artifact@v4
