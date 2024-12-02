@@ -29,7 +29,11 @@ jobs:
           make install
           make mig
       working-directory: ./api
-
+    - name: Create Database File
+      run: |
+          mkdir -p ./tmp
+          touch ./tmp/database.sqlite
+          chmod 777 ./tmp/database.sqlite
 
     - name: Run Playwright tests
       run: |
