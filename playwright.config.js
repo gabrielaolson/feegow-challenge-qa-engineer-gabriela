@@ -20,7 +20,7 @@ module.exports = defineConfig({
   /* Retry on CI only */
  
   /* Opt out of parallel tests on CI. */
-  workers: 8, 
+  workers: 2, 
   retries: 2, 
 
   use: {
