@@ -23,7 +23,7 @@ jobs:
     - name: Install dependencies
       run: | 
           cd ..
-          run: pwd 
+          pwd 
           npm ci
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
