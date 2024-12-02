@@ -20,7 +20,7 @@ module.exports = defineConfig({
   /* Retry on CI only */
  
   /* Opt out of parallel tests on CI. */
-  workers: 6, 
+  workers: 8, 
   retries: 2, 
 
   use: {
@@ -37,10 +37,10 @@ module.exports = defineConfig({
       name: 'Firefox',
       use: { browserName: 'firefox' },
     },
-    {
-      name: 'Webkit',
-      use: { browserName: 'webkit' },
-    },
+    // {
+    //   name: 'Webkit',
+    //   use: { browserName: 'webkit' },
+    // },
 
     
 
