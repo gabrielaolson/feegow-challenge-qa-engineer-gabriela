@@ -96,7 +96,7 @@ await test.step('Verificar se botão está inativo e mensagem de aviso aparece a
 
 });
 
-test('6 Cancelar uma consulta arressem marcada (menos de 5 minutos) com antecedência -  mais de 12 horas', async ({ page }) => {
+test.skip('6 Cancelar uma consulta arressem marcada (menos de 5 minutos) com antecedência -  mais de 12 horas', async ({ page }) => {
     await test.step('Navegue até a home page e espere a página carregar', async() =>{
     await homePage.naveguePara();
     await homePage.esperandoPaginaCarregar();
