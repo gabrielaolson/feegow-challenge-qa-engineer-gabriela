@@ -30,10 +30,6 @@ jobs:
           make mig
       working-directory: ./api
 
-    - name: Wait for API to be ready
-      run: npx wait-on http://localhost:8080/api/health
-      working-directory: ./api
-
 
     - name: Run Playwright tests
       run: |
