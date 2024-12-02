@@ -1,53 +1,56 @@
 # Bug Report
 
 ## Título do Bug
-[Descreva brevemente o problema, ex: "Erro ao cancelar consulta criada nos últimos 5 minutos"]
+[Descreva brevemente o problema,: "UI - Erro ao cancelar consulta criada nos últimos 5 minutos"]
 
 ---
 
 ## Descrição
-**Resumo**: [Descreva o bug em poucas palavras: qual é o problema e onde ocorre]
+**Resumo**: [Consulta criada nos últimos 5 minutos não pode ser cancelada]
 
-**Impacto**: [Explique como o bug afeta o sistema ou a experiência do usuário]
+**Impacto**: [O usuário não pode cancelar consulta que foi arressem agendada]
 
 ---
 
 ## Passos para Reproduzir
-1. [Passo 1: exemplo - Acesse a página de agendamento de consultas]
-2. [Passo 2: exemplo - Crie uma nova consulta para daqui a 5 minutos]
-3. [Passo 3: exemplo - Tente cancelar a consulta imediatamente após a criação]
-4. ...
+
+
+1. [Passo 1: Usuário já cadastrado faz login no sistema (url: 'https://clinicaluz.com)]
+2. [Passo 2: Acessa a página de agendamento de consultas]
+3. [Passo 3: Cria uma nova consulta nova com mais de 12h de antecedência]
+4. [Passo 4: Mensagem de consulta criada com sucesso aparece]
+5. [Passo 5: Clique em cancelar a consulta]
 
 ---
 
 ## Comportamento Esperado
-[Descreva o que deveria acontecer ao seguir os passos acima, ex: "O sistema deveria permitir o cancelamento de uma consulta imediatamente após a criação"]
+[O sistema deve permitir o cancelamento de uma consulta imediatamente após a criação]
 
 ---
 
 ## Comportamento Atual
-[Explique o que está acontecendo atualmente, ex: "O sistema retorna uma mensagem de erro ao tentar cancelar a consulta recém-criada"]
+[Mensagem de erro foi exibida: erro - por favor tente mais tarde]
 
 ---
 
 ## Ambiente de Teste
-- **Dispositivo**: [ex: Desktop]
-- **Sistema Operacional**: [ex: Windows 10]
-- **Navegador**: [ex: Google Chrome 90.0]
-- **Ambiente**: [ex: Staging]
+- **Dispositivo**: [ Desktop e Mobile ]
+- **Sistema Operacional**: [macOS ]
+- **Navegador**: [Google Chrome, Edge, Firefox, Safari ]
+- **Ambiente**: [ Staging ]
 
 ---
 
 ## Evidências
-[Inclua capturas de tela, gravações de tela ou logs relevantes, se possível]
+
 
 ---
 
 ## Critérios de Aceitação
-- [Critério 1: exemplo - Permitir que uma consulta seja cancelada imediatamente após a criação]
-- [Critério 2: exemplo - Garantir que a funcionalidade de cancelamento funcione em todos os dispositivos e navegadores suportados]
+- [Critério 1: Permitir que uma consulta seja cancelada imediatamente após a criação desde que esteja faltando ao menos 12h até o horário do agendamento]
+
 
 ---
 
 ## Observações Adicionais
-[Qualquer informação adicional que possa ajudar a equipe de desenvolvimento a entender e corrigir o bug]
+[ A API de cancelamento está funcionando sem problemas]
