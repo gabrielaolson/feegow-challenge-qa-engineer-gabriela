@@ -21,11 +21,9 @@ module.exports = defineConfig({
  
   /* Opt out of parallel tests on CI. */
   workers: 6, 
-  retries: 0, 
+  retries: 2, 
 
   use: {
-      reporter: 'html',
-    
     trace: 'on-first-retry',
   },
 
