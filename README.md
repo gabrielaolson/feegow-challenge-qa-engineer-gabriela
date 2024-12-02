@@ -6,6 +6,8 @@
 ### Inslalar playwright**
 `npm init playwright@latest`
 
+nota: após a instalação ajustar configurações para que fiquem conforme o arquivo que está salvo no github.
+
 ### Inslalar ajv para teste de contrato**
 `npm i ajv`
 
